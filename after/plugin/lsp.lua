@@ -35,5 +35,6 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
+vim.cmd([[map <space>e :lua vim.diagnostic.open_float(0, {scope="line"})<CR>]])
 
 lsp.setup()
