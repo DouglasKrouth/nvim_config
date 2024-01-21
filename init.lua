@@ -1,7 +1,12 @@
 require("krouth")
+require("mason").setup()
+
 vim.wo.number = true
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
+
+vim.o.background = "light" -- "light", "dark"
+vim.cmd([[colorscheme gruvbox]])
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
